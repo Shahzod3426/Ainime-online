@@ -1,0 +1,107 @@
+    /* Добавил в начало файла */
+:root {
+    --main-bg-color: rgba(46, 10, 57, 0.688);
+    --header-bg: rgba(30, 5, 38, 0.9);
+}
+
+body {
+    background: var(--main-bg-color);
+    color: white; /* Добавил цвет текста по умолчанию */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 60px; /* Для фиксированного header */
+}
+header{
+         display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 10;
+    }
+   h2 {
+    padding: 0%;
+    margin: 0%;
+   }
+    .grid-container {
+    display: grid;
+    
+    grid-template-columns: repeat(4, 1fr); /* 2 колонки */
+    grid-gap: 10px; /* Расстояние между блоками */
+    padding: 100px;
+    max-width:1300px; /* Ограничение ширины сетки */
+    margin: 0 auto; /* Центрирование */
+    border: 100px  black;
+}
+.grid-item {
+    padding: 10px;
+    margin-top: no;
+    justify-content:center;
+    border: none; /* Рамка для наглядности */
+    border-radius: 10px; /* Скругление углов */
+    overflow: hidden; /* Обрезка выходящего содержимого */
+    text-align: center; /* Выравнивание текста по центру */
+    background: none;
+}
+.grid-item img {
+    width: 100%; /* Растягиваем фото на всю ширину блока */
+    height: 280px; /* Фиксированная высота фото */
+    object-fit: cover; /* Обрезка фото с сохранением пропорций */
+    border-radius: 10px;
+}
+.grid-item p {
+    padding: 10px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Основные стили слайдера */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+.slide-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.slide-text p {
+    font-size: 1.2rem;
+}
+
+
